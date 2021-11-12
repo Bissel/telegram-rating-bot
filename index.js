@@ -8,7 +8,7 @@ Array.prototype.tail = function() {
 }
 
 const commands = [
-    {command: "/rate", description: "Starts a rating"},
+    {command: "/start", description: "Starts a rating"},
     {command: "/results", description: "Stops a rating and shows results"},
 ]
 
@@ -223,7 +223,7 @@ api.on('update', update => {
     const command = getCommand(chatMessage);
 
     switch (command) {
-        case "/rate":
+        case "/start":
             handleCommandRate(update.message);
             break;
         case "/results":
